@@ -1,0 +1,155 @@
+/*
+    Author: Olawale Akin-Odanye
+    Version: 1.0
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+input[type=text],input[type=password]{
+    padding: 10px 15px;
+    outline-color: #ff6b81;
+    width: 320px;
+}
+
+.wrapper {
+    /*border: 1px solid black;*/
+    padding: 1%;
+    width: 80%;
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* CSS For Menu */
+.menu {
+    border-bottom: 1px solid grey;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    display: inline-block;
+    padding: 1%;
+}
+
+.menu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff6b81;
+}
+
+.menu a:hover {
+    color: #ff4757;
+}
+
+/* CSS For Main Content */
+.main-content {
+    background-color: #f1f2f6;
+    padding: 2% 0;
+}
+
+.main-content .wrapper h1{
+    margin-bottom: 20px;
+}
+
+.col-4{
+    width: 20%;
+    background-color: white;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+.tbl-full{
+    width: 100%;
+}
+
+table tr th{
+    border-bottom: 1px solid black;
+    padding: 1%;
+    text-align: left;
+}
+
+table tr td{
+    padding: 1%;
+}
+
+.btn-primary{
+    background-color: #1e90ff;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: all 300ms ease-in-out;
+}
+
+.btn-primary:hover{
+    background-color: #3742fa;
+    transform: scale(1.05);
+}
+
+.btn-action{
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 300ms ease-in-out;
+}
+
+form table .btn-action{
+    font-size: 14px;
+    padding: 10px 15px;
+    margin-top: 15px;
+}
+
+.btn-action:hover{
+    transform: scale(1.05);
+}
+.btn-action:first-of-type{
+    margin-right: 10px;
+}
+
+.btn-secondary{
+    background-color: #7bed9f;
+    color: black;
+}
+
+
+.btn-secondary:hover{
+    background-color: #2ed573;
+}
+
+.btn-danger{
+    background-color: #ff6b81;
+}
+
+.btn-danger:hover{
+    background-color: #ff4757;
+}
+
+/* CSS For Footer */
+.footer {
+    background-color: #ff4757;
+    color: white;
+}
