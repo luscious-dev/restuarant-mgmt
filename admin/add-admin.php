@@ -1,4 +1,5 @@
 <?php include "partials/menu.php"; ?>
+
 <div class="main-content">
     <div class="wrapper">
         <h1>Add Admin</h1>
@@ -31,20 +32,36 @@
 //    Process the value from the form and save in database
 //    Check whether the submit button is clicked or not
 if (isset($_POST["submit"])) {
+
+    # 1. Get input from the user
     $full_name = $_POST["full_name"];
     $username = $_POST["username"];
     $password = md5($_POST["password"]); # Encrypt Password
 
-    # Sql Query to save data into database
-    $sql = "INSERT INTO tbl_admin (full_name,username,password) VALUES($full_name,$username,$password)";
+    # 2. Create Sql Query to save data into database
+    $sql = "INSERT INTO tbl_admin SET full_name='$full_name',username='$username',password='$password'";
 
-    echo $sql;
 
-    # Execute Query and save into database
-    # To see if the query execites successfully
-    $conn = mysqli_connect('localhost', 'root', '') or die(mysqli_error()); # Database connection
-    $db_select = mysqli_select_db($conn, 'restaurant') or die(mysqli_error());
-//    $res = mysqli_query($conn, $sql) or die(mysqli_error());
+    # res holds a boolean value to see if the query executes successfully
+    # 3. Execute Query and save into database
+    $res = mysqli_query($conn, $sql) or die(mysqli_error());
+
+    # 4. Check whether the query is executed successfully and show appropriate messages
+    if ($res == True) {
+        # echo "Data Inserted";
+        # Create a session variable to display message
+        $_SESSION['add'] = "<p class='success'>Admin Added Successfully</p>"; # Displaying session message
+
+        # Redirect Page
+        header("location:" . SITEURL . 'admin/manage-admin.php');
+    } else {
+        # echo "Failed to insert Data";
+        # Create a session variable to display message
+        $_SESSION['add'] = "<p class='error'>Failed to Add Admin</p>";
+
+        # Redirect Page
+        header("location:" . SITEURL . 'admin/add-admin.php');
+    }
 }
 
 ?>

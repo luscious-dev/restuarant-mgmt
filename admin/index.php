@@ -5,8 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./admin.css">
+    <link rel="stylesheet" href="../css/admin.css">
     <title>Restaurant Website</title>
+
 </head>
 <body>
 <!-- Menu Section Start-->
@@ -17,6 +18,12 @@
 <div class="main-content">
     <div class="wrapper">
         <h1>Dashboard</h1>
+        <?php
+        if(isset($_SESSION['login'])){
+            echo $_SESSION['login'];
+            unset($_SESSION['login']);
+        }
+        ?>
         <div class="col-4 text-center">
             <h1>5</h1>
             <br>
