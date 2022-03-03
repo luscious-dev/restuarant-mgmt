@@ -14,7 +14,7 @@
     <div class="wrapper">
         <h1>Manage Food</h1>
 
-        <a href="#" class="btn-primary">Add Food</a>
+        <a href="#" class="btn btn-primary">Add Food</a>
 
         <table class="tbl-full">
             <tr>

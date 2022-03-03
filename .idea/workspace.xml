@@ -4,10 +4,15 @@
     <list default="true" id="a5cf7049-abdb-48f8-a709-7f963a5a09ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/add-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add-admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/manage-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/manage-admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/partials/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/partials/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/manage-category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/manage-category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/manage-food.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/manage-food.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/manage-order.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/manage-order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/update-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/update-admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/update-password.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/update-password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +66,10 @@
       <workItem from="1645535491785" duration="5681000" />
       <workItem from="1645591049750" duration="6571000" />
       <workItem from="1645822648265" duration="6235000" />
+      <workItem from="1646048634440" duration="284000" />
+      <workItem from="1646049032335" duration="3710000" />
+      <workItem from="1646083420808" duration="7400000" />
+      <workItem from="1646256372597" duration="8683000" />
     </task>
     <servers />
   </component>
@@ -84,17 +93,17 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="498" y="131" key="NewPhpClassDialog/0.0.1536.816@0.0.1536.816" timestamp="1645828342015" />
-    <state x="604" y="331" key="NewPhpFileDialog" timestamp="1645828353411">
+    <state x="604" y="331" key="NewPhpFileDialog" timestamp="1646083808848">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="604" y="331" key="NewPhpFileDialog/0.0.1536.816@0.0.1536.816" timestamp="1645828353411" />
+    <state x="604" y="331" key="NewPhpFileDialog/0.0.1536.816@0.0.1536.816" timestamp="1646083808848" />
     <state x="277" y="53" key="SettingsEditor" timestamp="1645536010101">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="277" y="53" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1645536010101" />
-    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1645535639607">
+    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1646085995477">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1645535639607" />
+    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1646085995477" />
   </component>
 </project>

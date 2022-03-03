@@ -24,7 +24,7 @@
                 <tr>
                     <td colspan="2">
                         <input type="hidden" name="id" value="<?php echo $_GET['id'] ?>">
-                        <input type="submit" name="submit" value="Change Password" class="btn-action btn-secondary">
+                        <input type="submit" name="submit" value="Change Password" class="btn btn-secondary">
                     </td>
                 </tr>
             </table>

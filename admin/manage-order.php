@@ -13,7 +13,7 @@
 <div class="main-content">
     <div class="wrapper">
         <h1>Manage Order</h1>
-        <a href="#" class="btn-primary">Add Order</a>
+        <a href="#" class="btn btn-primary">Add Order</a>
 
         <table class="tbl-full">
             <tr>

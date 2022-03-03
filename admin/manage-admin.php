@@ -46,7 +46,7 @@
 
         ?>
         <!--        Button to Add Admin-->
-        <a href="add-admin.php" class="btn-primary">Add Admin</a>
+        <a href="add-admin.php" class="btn btn-primary">Add Admin</a>
 
         <table class="tbl-full">
             <tr>

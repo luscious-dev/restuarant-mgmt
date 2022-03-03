@@ -41,7 +41,7 @@
 
                 <tr>
                     <td colspan="2">
-                        <input type="submit" value="Update Admin" name="submit" class="btn-action btn-secondary">
+                        <input type="submit" value="Update Admin" name="submit" class="btn btn-secondary">
                     </td>
                 </tr>
             </table>

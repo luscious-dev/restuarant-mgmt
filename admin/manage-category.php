@@ -8,50 +8,74 @@
     <title>Category</title>
 </head>
 <body>
-<?php include "./partials/menu.php"?>
+<?php include "./partials/menu.php" ?>
 
 <div class="main-content">
     <div class="wrapper">
         <h1>Manage Category</h1>
-        <a href="#" class="btn-primary">Add Category</a>
+        <?php
+        if (isset($_SESSION['add'])) {
+            echo $_SESSION['add'];
+            unset($_SESSION['add']);
+        }
+        ?>
+        <a href="<?php echo SITEURL . 'admin/add-category.php' ?>" class="btn btn-primary">Add Category</a>
 
         <table class="tbl-full">
             <tr>
                 <th>S.N.</th>
-                <th>Full Name</th>
-                <th>Username</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Features</th>
+                <th>Active</th>
                 <th>Actions</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>Olawale Akin-Odanye</td>
-                <td>walz123</td>
-                <td>
-                    <a href="#" class="btn-secondary btn-action">Update Admin</a>
-                    <a href="#" class="btn-danger btn-action">Delete Admin</a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Abolade Olanrewaju</td>
-                <td>sullchi_bitch</td>
-                <td>
-                    <a href="#" class="btn-secondary btn-action">Update Admin</a>
-                    <a href="#" class="btn-danger btn-action">Delete Admin</a>
-                </td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Ojenike Emmanuel</td>
-                <td>elyk_slut</td>
-                <td>
-                    <a href="#" class="btn-secondary btn-action">Update Admin</a>
-                    <a href="#" class="btn-danger btn-action">Delete Admin</a>
-                </td>
-            </tr>
+
+            <?php
+            $sql = "SELECT * FROM tbl_category";
+            $res = mysqli_query($conn, $sql);
+
+            if ($res == true) {
+                $sn = 1;
+                $count = mysqli_num_rows($res);
+                if ($count > 0) {
+                    while ($row = mysqli_fetch_assoc($res)) {
+                        $title = $row['title'];
+                        if ($row['image_name'] == ''){
+                            $image_name = "<span class='error'>No Image</span>";
+                        }else{
+                            $tmp = $row['image_name'];
+                            $image_name = "<img src='../images/category/$tmp'>";
+                        }
+
+                        $featured = $row['featured'];
+                        $active = $row['active'];
+                        echo "
+                        <tr>
+                            <td>$sn</td>
+                            <td>$title</td>
+                            <td>$image_name</td>
+                            <td>$featured</td>
+                            <td>$active</td>
+                            <td>
+                                <a href='#' class='btn-secondary btn-action'>Update Category</a>
+                                <a href='#' class='btn-danger btn-action'>Delete Category</a>
+                            </td>
+                        </tr>";
+                        $sn++;
+                    }
+                }else{
+                    echo "<tr>
+                            <td colspan='6'><div class='error'>No Food Category Added</div></td>
+                        </tr>";
+                }
+
+            }
+            ?>
+
         </table>
     </div>
 </div>
-<?php include "./partials/footer.php"?>
+<?php include "./partials/footer.php" ?>
 </body>
 </html>

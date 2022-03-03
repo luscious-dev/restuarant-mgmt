@@ -28,7 +28,7 @@ include "../config/constants.php";
         <form action="" method="post">
             <label for="username">Username: <input placeholder="Enter Username" type="text" id="username" name="username"></label>
             <label for="password">Password: <input placeholder="Enter Password" type="password" id="password" name="password"></label>
-            <input class="btn-primary" name="submit" type="submit" value="Login">
+            <input class="btn btn-primary" name="submit" type="submit" value="Login">
         </form>
         <!--    Login Form Ends    -->
         <p class="text-center">Created By <a href="github.com/luscious-dev">Olawale</a></p>
@@ -56,12 +56,10 @@ include "../config/constants.php";
                 # The code to enforce authorization will be added in the menu file because it is used in every file
                 $_SESSION['user'] = $username;
                 header('location:'.SITEURL.'admin/index.php');
-                echo "Correct Password";
             }
             else{
                 $_SESSION['login'] = "<p class='error'>Incorrect Password</p>";
                 header('location:'.SITEURL.'admin/login.php');
-                echo "Incorrect Password";
             }
         }
         else{
