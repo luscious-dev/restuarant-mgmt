@@ -18,6 +18,22 @@
             echo $_SESSION['add'];
             unset($_SESSION['add']);
         }
+        if (isset($_SESSION['remove'])) {
+            echo $_SESSION['remove'];
+            unset($_SESSION['remove']);
+        }
+        if (isset($_SESSION['delete'])) {
+            echo $_SESSION['delete'];
+            unset($_SESSION['delete']);
+        }
+        if (isset($_SESSION['no-category-found'])) {
+            echo $_SESSION['no-category-found'];
+            unset($_SESSION['no-category-found']);
+        }
+        if (isset($_SESSION['update'])) {
+            echo $_SESSION['update'];
+            unset($_SESSION['update']);
+        }
         ?>
         <a href="<?php echo SITEURL . 'admin/add-category.php' ?>" class="btn btn-primary">Add Category</a>
 
@@ -40,28 +56,36 @@
                 $count = mysqli_num_rows($res);
                 if ($count > 0) {
                     while ($row = mysqli_fetch_assoc($res)) {
+                        $id=$row['id'];
                         $title = $row['title'];
-                        if ($row['image_name'] == ''){
-                            $image_name = "<span class='error'>No Image</span>";
+                        $image_name = $row['image_name'];
+                        if ($image_name == ''){
+                            $image = "<span class='error'>No Image</span>";
                         }else{
-                            $tmp = $row['image_name'];
-                            $image_name = "<img src='../images/category/$tmp'>";
+                            $image = "<img src='../images/category/$image_name'>";
                         }
 
                         $featured = $row['featured'];
                         $active = $row['active'];
-                        echo "
+
+                        ?>
+
+
                         <tr>
-                            <td>$sn</td>
-                            <td>$title</td>
-                            <td>$image_name</td>
-                            <td>$featured</td>
-                            <td>$active</td>
+                            <td><?php echo $sn ?></td>
+                            <td><?php echo $title ?></td>
+                            <td><?php echo $image ?></td>
+                            <td><?php echo $featured ?></td>
+
+                            <td><?php echo $active ?></td>
                             <td>
-                                <a href='#' class='btn-secondary btn-action'>Update Category</a>
-                                <a href='#' class='btn-danger btn-action'>Delete Category</a>
+                                <a href='<?php echo SITEURL."admin/update-category.php?id=$id" ?>' class='btn-secondary btn-action'>Update Category</a>
+                                <a href='<?php echo SITEURL."admin/delete-category.php?id=$id&image_name=$image_name" ?>' class='btn-danger btn-action'>
+                                    Delete Category
+                                </a>
                             </td>
-                        </tr>";
+                        </tr>
+            <?php
                         $sn++;
                     }
                 }else{

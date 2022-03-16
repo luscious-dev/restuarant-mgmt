@@ -17,6 +17,19 @@ input[type=text],input[type=password]{
     width: 320px;
 }
 
+input[type=number]{
+    width: 100px;
+    border-radius: 5px;
+    height: 26px;
+    padding: 5px 10px;
+}
+textarea{
+    padding: 10px;
+}
+select{
+    height: 26px;
+    padding: 0px 10px;
+}
 .wrapper {
     /*border: 1px solid black;*/
     padding: 1%;

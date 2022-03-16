@@ -3,16 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a5cf7049-abdb-48f8-a709-7f963a5a09ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/add-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add-admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/manage-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/manage-admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/add-category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add-category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/manage-category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/manage-category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/manage-food.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/manage-food.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/manage-order.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/manage-order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/update-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/update-admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/update-password.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/update-password.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/category/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/category/Food Category 201.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +32,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dell 5480\PhpstormProjects\restaurant\images\category" />
       <recent name="C:\Users\Dell 5480\PhpstormProjects\restaurant\css" />
       <recent name="C:\Users\Dell 5480\PhpstormProjects\restaurant\admin" />
       <recent name="C:\Users\Dell 5480\PhpstormProjects\restaurant" />
@@ -69,7 +66,12 @@
       <workItem from="1646048634440" duration="284000" />
       <workItem from="1646049032335" duration="3710000" />
       <workItem from="1646083420808" duration="7400000" />
-      <workItem from="1646256372597" duration="8683000" />
+      <workItem from="1646256372597" duration="9281000" />
+      <workItem from="1646511200343" duration="7224000" />
+      <workItem from="1646600760377" duration="5266000" />
+      <workItem from="1646739782402" duration="8051000" />
+      <workItem from="1647038158638" duration="2844000" />
+      <workItem from="1647206981571" duration="7828000" />
     </task>
     <servers />
   </component>
@@ -93,17 +95,21 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="498" y="131" key="NewPhpClassDialog/0.0.1536.816@0.0.1536.816" timestamp="1645828342015" />
-    <state x="604" y="331" key="NewPhpFileDialog" timestamp="1646083808848">
+    <state x="604" y="331" key="NewPhpFileDialog" timestamp="1647038356926">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="604" y="331" key="NewPhpFileDialog/0.0.1536.816@0.0.1536.816" timestamp="1646083808848" />
-    <state x="277" y="53" key="SettingsEditor" timestamp="1645536010101">
+    <state x="604" y="331" key="NewPhpFileDialog/0.0.1536.816@0.0.1536.816" timestamp="1647038356926" />
+    <state x="277" y="53" key="SettingsEditor" timestamp="1647209618564">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="277" y="53" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1645536010101" />
-    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1646085995477">
+    <state x="277" y="53" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1647209618564" />
+    <state x="603" y="291" key="data.grid.dml.preview.dialog" timestamp="1646757653403">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1646085995477" />
+    <state x="603" y="291" key="data.grid.dml.preview.dialog/0.0.1536.816@0.0.1536.816" timestamp="1646757653403" />
+    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1647214127743">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1647214127743" />
   </component>
 </project>

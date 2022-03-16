@@ -66,7 +66,7 @@
                     $active = $_POST["active"];
                 } else {
                     # set the default value
-                    $featured = "No";
+                    $active = "No";
                 }
 
                 # Check whether image is selected or not
@@ -74,36 +74,43 @@
 
                 // die();  # Break the code here
 
-                if (isset($_FILES['image']['name'])) {
+                if (isset($_FILES['image'])) {
                     # Upload the image
                     # To upload image, we need the image name, source path and destination path
+
+                    # $_FILES returns an array
                     $image_name = $_FILES['image']['name'];
 
-                    # Auto rename
-                    // Get image extension
-                    # = explode('.',$image_name)[1];
-                    $ext = end(explode('.',$image_name));
+                    if($image_name != ""){
+                        # Auto rename
+                        // Get image extension
+                        # = explode('.',$image_name)[1];
+                        $ext = end(explode('.',$image_name));
 
-                    // Rename
-                    $image_name = "Food Category ".rand(000,999).'.'.$ext;
+                        // Rename
+                        $image_name = "Food Category ".rand(000,999).'.'.$ext;
 
-                    $source_path = $_FILES['image']['tmp_name'];
-                    $destination_path = "../images/category/".$image_name;
+                        $source_path = $_FILES['image']['tmp_name'];
+                        $destination_path = "../images/category/".$image_name;
 
-                    # Upload image
-                    $upload = move_uploaded_file($source_path, $destination_path);
+                        # Upload image
+                        $upload = move_uploaded_file($source_path, $destination_path);
 
-                    # Check whether the image is uploaded or not
-                    if ($upload == false) {
-                        $_SESSION['upload'] = "<p class='error'>Image Uploaded Failed</p>";
-                        header("location:" . SITEURL . "admin/add-category.php");
+                        # Check whether the image is uploaded or not
+                        if ($upload == false) {
+                            $_SESSION['upload'] = "<p class='error'>Image Upload Failed</p>";
+                            header("location:" . SITEURL . "admin/add-category.php");
 
-                        # Stop the process
-                        die();
+                            # Stop the process
+                            die();
+                        }
+
                     }
+
+
                     # If image is not uploaded, then we will stop the process and redirect with error message
                 } else {
-                    # Don't upload image and set the immage name value as blank
+                    # Don't upload image and set the image name value as blank
                     $image_name = "";
                 }
 
