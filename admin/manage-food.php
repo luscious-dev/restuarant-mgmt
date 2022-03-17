@@ -18,6 +18,18 @@
             echo $_SESSION['add'];
             unset($_SESSION['add']);
         }
+        if (isset($_SESSION['delete'])) {
+            echo $_SESSION['delete'];
+            unset($_SESSION['delete']);
+        }
+        if (isset($_SESSION['upload'])) {
+            echo $_SESSION['upload'];
+            unset($_SESSION['upload']);
+        }
+        if (isset($_SESSION['authorized'])) {
+            echo $_SESSION['authorized'];
+            unset($_SESSION['authorized']);
+        }
         ?>
         <a href="<?php echo SITEURL . 'admin/add-food.php' ?>" class="btn btn-primary">Add Food</a>
 
@@ -40,6 +52,7 @@
                 if (mysqli_num_rows($res) > 0) {
                     $count = 1;
                     while ($row = mysqli_fetch_assoc($res)) {
+                        $id = $row['id'];
                         $title = $row['title'];
                         $description = $row['description'];
                         $price = $row['price'];
@@ -80,8 +93,8 @@
                             <td><?php echo $featured ?></td>
                             <td><?php echo $active ?></td>
                             <td>
-                                <a href="#" class="btn-secondary btn-action">Update Food</a>
-                                <a href="#" class="btn-danger btn-action">Delete Food</a>
+                                <a href="<?php echo SITEURL; ?>admin/update-food.php?id=<?php echo $id; ?>" class="btn-secondary btn-action">Update Food</a>
+                                <a href='<?php echo SITEURL."admin/delete-food.php?id=$id&image=$image_name" ?>' class="btn-danger btn-action">Delete Food</a>
                             </td>
                         </tr>
                         <?php
@@ -98,33 +111,7 @@
                 # Failed to Fetch Data
             }
             ?>
-            <!--            <tr>-->
-            <!--                <td>1</td>-->
-            <!--                <td>Olawale Akin-Odanye</td>-->
-            <!--                <td>walz123</td>-->
-            <!--                <td>-->
-            <!--                    <a href="#" class="btn-secondary btn-action">Update Admin</a>-->
-            <!--                    <a href="#" class="btn-danger btn-action">Delete Admin</a>-->
-            <!--                </td>-->
-            <!--            </tr>-->
-            <!--            <tr>-->
-            <!--                <td>2</td>-->
-            <!--                <td>Abolade Olanrewaju</td>-->
-            <!--                <td>sullchi_bitch</td>-->
-            <!--                <td>-->
-            <!--                    <a href="#" class="btn-secondary btn-action">Update Admin</a>-->
-            <!--                    <a href="#" class="btn-danger btn-action">Delete Admin</a>-->
-            <!--                </td>-->
-            <!--            </tr>-->
-            <!--            <tr>-->
-            <!--                <td>3</td>-->
-            <!--                <td>Ojenike Emmanuel</td>-->
-            <!--                <td>elyk_slut</td>-->
-            <!--                <td>-->
-            <!--                    <a href="#" class="btn-secondary btn-action">Update Admin</a>-->
-            <!--                    <a href="#" class="btn-danger btn-action">Delete Admin</a>-->
-            <!--                </td>-->
-            <!--            </tr>-->
+
         </table>
     </div>
 </div>
