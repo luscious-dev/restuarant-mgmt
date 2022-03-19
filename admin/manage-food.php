@@ -30,6 +30,10 @@
             echo $_SESSION['authorized'];
             unset($_SESSION['authorized']);
         }
+        if (isset($_SESSION['update'])) {
+            echo $_SESSION['update'];
+            unset($_SESSION['update']);
+        }
         ?>
         <a href="<?php echo SITEURL . 'admin/add-food.php' ?>" class="btn btn-primary">Add Food</a>
 

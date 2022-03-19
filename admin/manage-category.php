@@ -42,7 +42,7 @@
                 <th>S.N.</th>
                 <th>Title</th>
                 <th>Image</th>
-                <th>Features</th>
+                <th>Featured</th>
                 <th>Active</th>
                 <th>Actions</th>
             </tr>

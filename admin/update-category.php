@@ -87,6 +87,7 @@ include "./partials/menu.php";
                 </tr>
                 <tr>
                     <td colspan="2">
+                        <input type="hidden" name="old_image" value="<?php echo $current_image ?>">
                         <input type="submit" class="btn btn-secondary" value="Update Category" name="submit">
                     </td>
                 </tr>
@@ -127,9 +128,11 @@ include "./partials/menu.php";
                         $_SESSION['failed-remove'] = "<p class='error'>Image Upload Failed</p>";
                         header("location:".SITEURL."admin/update-category.php");
                     }
+                }else{
+                    $new_image_name = $_POST['old_image'];
                 }
             }else{
-                $new_image_name = $current_image;
+                $new_image_name = $_POST['old_image'];
             }
 
             $new_featured = $_POST['featured'];

@@ -4,6 +4,12 @@
         <div class="wrapper">
             <h1>Update Food</h1>
             <?php
+            if (isset($_SESSION['image-error'])) {
+                echo $_SESSION['image-error'];
+                unset($_SESSION['image-error']);
+            }
+            ?>
+            <?php
             if (isset($_GET['id'])) {
                 $id = $_GET['id'];
                 $sql = "SELECT * FROM tbl_food WHERE id=$id";
@@ -26,9 +32,9 @@
                 } else {
                     # Invalid Query
                 }
-            }else{
+            } else {
                 # Redirect the user
-                header("location:".SITEURL."admin/manage-food.php");
+                header("location:" . SITEURL . "admin/manage-food.php");
             }
 
             ?>
@@ -50,13 +56,13 @@
                         <td style="width: 135px">Current Image:</td>
                         <td>
                             <?php
-                                if($image_name != ''){
-                                    ?>
-                                    <img src="../images/food/<?php echo $image_name ?>" alt="">
-                                    <?php
-                                }else{
-                                    echo "<p class='error'>No Previous Image</p>";
-                                }
+                            if ($image_name != '') {
+                                ?>
+                                <img src="../images/food/<?php echo $image_name ?>" alt="">
+                                <?php
+                            } else {
+                                echo "<p class='error'>No Previous Image</p>";
+                            }
                             ?>
                         </td>
                     </tr>
@@ -79,7 +85,9 @@
                                             $cat_name = $row['title'];
                                             $cat_id = $row['id'];
                                             ?>
-                                            <option <?php if ($category_id == $cat_id) {echo "selected";} ?> value="<?php echo $cat_id ?>"><?php echo $cat_name ?></option>
+                                            <option <?php if ($category_id == $cat_id) {
+                                                echo "selected";
+                                            } ?> value="<?php echo $cat_id ?>"><?php echo $cat_name ?></option>
                                             <?php
                                         }
                                     } else {
@@ -117,14 +125,71 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <input type="hidden" name="id" value="<?php echo $id?>">
-                            <input type="hidden" name="current_image" value="<?php echo $image_name?>">
+                            <input type="hidden" name="id" value="<?php echo $id ?>">
+                            <input type="hidden" name="current_image" value="<?php echo $image_name ?>">
                             <input class="btn btn-secondary" type="submit" name="submit" value="Update Food">
                         </td>
                     </tr>
                 </table>
             </form>
+            <?php
+            if (isset($_POST['submit'])) {
+                $new_title = $_POST['title'];
+                $new_desc = $_POST['desc'];
+                $new_price = $_POST['price'];
 
+                if (isset($_FILES['image'])) {
+                    $image = $_FILES['image'];
+                    $new_image_name = $image['name'];
+
+                    if ($new_image_name != '') {
+                        $ext = end(explode('.', $new_image_name));
+                        $new_image_name = "Food-Name-" . rand(0000, 9999) . "." . $ext;
+
+                        $src = $image['tmp_name'];
+                        $dest = "../images/food/" . $new_image_name;
+                        $upload = move_uploaded_file($src, $dest);
+
+                        if ($upload == true) {
+                            if (isset($_POST['current_image'])) {
+                                $old_image = $_POST['current_image'];
+                                if ($old_image != "") {
+                                    $delete = unlink("../images/food/" . $old_image);
+                                    if ($delete == false) {
+                                        $_SESSION['image-error'] = "<p class='error'>Something went wrong with old image removal</p>";
+                                        header("location:" . SITEURL . "admin/update-food.php?id=$id");
+                                    }
+                                }
+                            }
+                        } else {
+                            $_SESSION['image-error'] = "<p class='error'>Something went wrong with new image update</p>";
+                            header("location:" . SITEURL . "admin/update-food.php?id=$id");
+                            die();
+                        }
+                    } else {
+                        $new_image_name = $_POST['current_image'];
+                    }
+                } else {
+                    $new_image_name = $_POST['current_image'];
+                }
+
+                $new_category_id = $_POST['category'];
+                $new_active = $_POST['active'];
+                $new_featured = $_POST['featured'];
+
+
+                $sql3 = "UPDATE tbl_food SET title='$new_title',description='$new_desc',price=$new_price,image_name='$new_image_name',category_id=$new_category_id,featured='$new_featured',active='$new_active' WHERE id=$id";
+
+                $res3 = mysqli_query($conn, $sql3);
+                if ($res3 == true) {
+                    $_SESSION['update'] = '<p class="success">Food Updated Successfully</p>';
+                    header("location:" . SITEURL . "admin/manage-food.php");
+                } else {
+                    $_SESSION['update'] = '<p class="error">Failed to Update Food</p>';
+                    header("location:" . SITEURL . "admin/manage-food.php");
+                }
+            }
+            ?>
         </div>
     </div>
 
