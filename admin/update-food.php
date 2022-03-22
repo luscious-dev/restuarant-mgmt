@@ -125,8 +125,7 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <input type="hidden" name="id" value="<?php echo $id ?>">
-                            <input type="hidden" name="current_image" value="<?php echo $image_name ?>">
+
                             <input class="btn btn-secondary" type="submit" name="submit" value="Update Food">
                         </td>
                     </tr>
@@ -143,7 +142,8 @@
                     $new_image_name = $image['name'];
 
                     if ($new_image_name != '') {
-                        $ext = end(explode('.', $new_image_name));
+                        $ext = explode('.', $new_image_name);
+                        $ext = end($ext);
                         $new_image_name = "Food-Name-" . rand(0000, 9999) . "." . $ext;
 
                         $src = $image['tmp_name'];
@@ -167,10 +167,12 @@
                             die();
                         }
                     } else {
-                        $new_image_name = $_POST['current_image'];
+//                        $new_image_name = $_POST['current_image'];
+                        $new_image_name = $image_name;
                     }
                 } else {
-                    $new_image_name = $_POST['current_image'];
+//                    $new_image_name = $_POST['current_image'];
+                    $new_image_name = $image_name;
                 }
 
                 $new_category_id = $_POST['category'];

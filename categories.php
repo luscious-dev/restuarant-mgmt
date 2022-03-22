@@ -7,7 +7,7 @@
         <h2 class="text-center">Explore Foods</h2>
 
         <?php
-        $sql = "SELECT * FROM tbl_category WHERE active='Yes' AND featured='Yes' LIMIT 3";
+        $sql = "SELECT * FROM tbl_category WHERE active='Yes'";
         $res = mysqli_query($conn, $sql);
 
         if ($res == true) {

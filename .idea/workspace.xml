@@ -3,19 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a5cf7049-abdb-48f8-a709-7f963a5a09ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/manage-category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/manage-category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/manage-food.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/manage-food.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/update-category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/update-category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/update-food.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/update-food.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category-foods.html" beforeDir="false" afterPath="$PROJECT_DIR$/category-foods.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-search.html" beforeDir="false" afterPath="$PROJECT_DIR$/food-search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foods.html" beforeDir="false" afterPath="$PROJECT_DIR$/foods.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/category/Food Category 144.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/category/Food Category 899.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/food/Food-Name-6038.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/categories.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foods.php" beforeDir="false" afterPath="$PROJECT_DIR$/foods.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +73,8 @@
       <workItem from="1647461759490" duration="8419000" />
       <workItem from="1647551572406" duration="3950000" />
       <workItem from="1647690137852" duration="5278000" />
+      <workItem from="1647880389665" duration="1451000" />
+      <workItem from="1647881869146" duration="3553000" />
     </task>
     <servers />
   </component>
